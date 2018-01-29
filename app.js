@@ -9,9 +9,10 @@ var index = require('./routes/index');
 var players = require('./routes/players');
 
 var app = express();
+var db = require('./config').db;
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/players')
+mongoose.connect(db)
     .then(() =>  console.log('connection succesful'))
     .catch((err) => console.error(err));
 
