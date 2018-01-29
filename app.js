@@ -9,10 +9,9 @@ var index = require('./routes/index');
 var players = require('./routes/players');
 
 var app = express();
-var db = require('./config').db;
 
 var mongoose = require('mongoose');
-mongoose.connect(db)
+mongoose.connect(process.env.MONGODB_URI)
     .then(() =>  console.log('connection succesful'))
     .catch((err) => console.error(err));
 
