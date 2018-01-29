@@ -1,0 +1,85 @@
+<div class="container">
+  <h2>Tell us about yourself</h2>
+  <form>
+
+    <div class="form-group">
+      <label for="name">What is your name?</label>
+      <input ng-model="vm.demographic.name"  class="form-control" id="name" />
+    </div>
+
+    <div class="form-group">
+      <label for="nationality">What nationality are you?</label>
+      <input ng-model="vm.demographic.nationality" class="form-control" id="nationality" />
+    </div>
+
+    <div class="form-group">
+      <label for="location">Where do you live?</label>
+      <input ng-model="vm.demographic.location" class="form-control" id="location" />
+    </div>
+
+
+    <div class="form-group">
+      <label for="dob">What is your birthday?</label>
+      <input ng-model="vm.demographic.dob" type="date" id="dob" />
+    </div>
+
+    <div>
+      <label>What is your gender?</label>
+      <div class="radio">
+        <label>
+          <input ng-model="vm.demographic.gender" value="Male" name="gender" type="radio" >
+          Male
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input ng-model="vm.demographic.gender" value="Female"  name="gender"  type="radio" >
+          Female
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <label>Are you currently married?</label>
+      <div class="radio">
+        <label>
+          <input ng-model="vm.demographic.married" value="true" name="married" type="radio" >
+          true
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input ng-model="vm.demographic.married" value="false"  name="married" type="radio" >
+          false
+        </label>
+      </div>
+    </div>
+
+
+    <div>
+      <label>Do you drink alcohol?</label>
+      <div class="radio">
+        <label>
+          <input ng-model="vm.demographic.alcohol" value="true" name="alcohol" type="radio" >
+          true
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input ng-model="vm.demographic.alcohol" value="false"  name="alcohol" type="radio" >
+          false
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="about">Give a summary of yourself</label>
+      <textarea ng-model="vm.demographic.about" class="form-control" id="about"></textarea>
+    </div>
+
+    <div class="form-group text-center">
+      <a ui-sref="form.sports" class="btn"> Sports <span class="glyphicon glyphicon-arrow-right"></span></a>
+    </div>
+
+  </form>
+</div>

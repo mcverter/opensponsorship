@@ -1,0 +1,43 @@
+<div>
+    <logo></logo>
+    <h1>Players</h1>
+    <div ng-repeat="player in vm.players">
+        {{player}}
+        <div class="panel panel-default" style="border: 1px solid #efefe9">
+            <div class="panel-heading">
+                <h2 class="panel-title">{{player.name}}</h2>
+            </div>
+            <div class="panel-body">
+                <table>
+                    <tr><td>Nationality:</td><td>{{ player.nationality }}</td> </tr>
+                    <tr><td>Location:</td><td>{{ player.location }}</td> </tr>
+                    <tr><td>Birthday:</td><td>{{ player.dob | date }}</td> </tr>
+                    <tr><td>Gender:</td><td>{{ player.gender }}</td> </tr>
+                    <tr><td>Married?</td><td>{{ player.married }}</td> </tr>
+                    <tr><td>Alcohol?</td><td>{{ player.alcohol }}</td> </tr>
+                    <tr><td>Summary</td><td>{{ player.summary }}</td> </tr>
+                    <tr><td>Sports Played:</td>
+                        <td>
+                            <ul>
+                                <li ng-repeat="sport in player.sports">{{sport}}</li>
+                            </ul>
+                        </td> </tr>
+                    <tr><td>League:</td><td>{{ player.league }}</td> </tr>
+                    <tr><td>Team:</td><td>{{ player.team }}</td> </tr>
+                    <tr><td>Facebook:</td><td>{{ player.facebook }}</td> </tr>
+                    <tr><td>Twitter:</td><td>{{ player.twitter }}</td> </tr>
+                    <tr><td>Instagram:</td><td>{{ player.instagram }}</td> </tr>
+                    <tr><td>Snapchat:</td><td>{{ player.snapchat }}</td> </tr>
+                    <tr><td>Youtube:</td><td>{{ player.youtube }}</td> </tr>
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a ui-sref="form.demographic" class="btn btn-primary">Create Another Profile</a>
+    </div>
+
+</div>

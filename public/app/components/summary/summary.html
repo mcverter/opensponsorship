@@ -1,0 +1,80 @@
+<div class="container">
+  <h1>Summary</h1>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Demographic Information</h3>
+    </div>
+
+    <div class="panel-body">
+      <table>
+        <tr><td>Name:</td><td>{{ vm.summary.demographic.name }}</td> </tr>
+        <tr><td>Nationality:</td><td>{{ vm.summary.demographic.nationality }}</td> </tr>
+        <tr><td>Location:</td><td>{{ vm.summary.demographic.location }}</td> </tr>
+        <tr><td>Birthday:</td><td>{{ vm.summary.demographic.dob | date }}</td> </tr>
+        <tr><td>Gender:</td><td>{{ vm.summary.demographic.gender }}</td> </tr>
+        <tr><td>Married?</td><td>{{ vm.summary.demographic.married }}</td> </tr>
+        <tr><td>Alcohol?</td><td>{{ vm.summary.demographic.alcohol }}</td> </tr>
+        <tr><td>Summary:</td><td>{{ vm.summary.demographic.about }}</td> </tr>
+      </table>
+
+      <div class="text-center">
+        <a ui-sref="form.demographic" class="btn btn-warning">Edit Demographic Information</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Sports Information</h3>
+    </div>
+
+    <div class="panel-body">
+      <table>
+        <tr><td>Sports Played:</td>
+          <td>
+            <ul>
+              <li ng-repeat="sport in vm.summary.sports.sports">{{sport}}</li>
+            </ul>
+          </td> </tr>
+        <tr><td>League:</td><td>{{ vm.summary.sports.league }}</td> </tr>
+        <tr><td>Team:</td><td>{{ vm.summary.sports.team }}</td> </tr>
+      </table>
+
+      <div class="text-center">
+        <a ui-sref="form.sports" class="btn btn-warning">Edit Sports Information</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Social Media Information</h3>
+    </div>
+
+    <div class="panel-body">
+      <table>
+        <tr><td>Facebook:</td><td>{{ vm.summary.social.facebook }}</td> </tr>
+        <tr><td>Twitter:</td><td>{{ vm.summary.social.twitter }}</td> </tr>
+        <tr><td>Instagram:</td><td>{{ vm.summary.social.instagram }}</td> </tr>
+        <tr><td>Snapchat:</td><td>{{ vm.summary.social.snapchat }}</td> </tr>
+        <tr><td>Youtube:</td><td>{{ vm.summary.social.youtube }}</td> </tr>
+      </table>
+
+      <div class="text-center">
+        <a ui-sref="form.social" class="btn btn-warning">Edit Social Media Information</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="text-center" style="margin-top: 50px">
+    <button class="btn-lg btn-success" ng-click="vm.submitPlayer()"> Submit Player Information</button>
+  </div>
+</div>
+
